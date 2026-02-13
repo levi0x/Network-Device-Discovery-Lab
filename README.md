@@ -1,9 +1,8 @@
 # network-device-discovery-lab-
 
-Network Device Discovery Using Native Windows Tools
 Objective
 
-Identify devices connected to the same subnet using native Windows command-line tools and analyze network segmentation behavior in a managed environment.
+Perform endpoint-based network device discovery using native Windows tools and analyze how segmentation and access controls impact device visibility within a managed environment.
 
 Environment
 
@@ -15,6 +14,8 @@ IP Address: 172.23.32.xxx
 
 Subnet Mask: 255.255.240.0 (/20)
 
+-------------------------------------------------------------------------------------
+
 Tools Used
 
 ipconfig
@@ -24,6 +25,8 @@ ipconfig /all
 arp -a
 
 Get-NetNeighbor -AddressFamily IPv4
+
+-------------------------------------------------------------------------------------
 
 Methodology
 
@@ -35,7 +38,11 @@ Used arp -a to view ARP cache entries.
 
 Used PowerShell neighbor table to identify reachable IPv4 devices.
 
+-------------------------------------------------------------------------------------
+
 Findings
+
+Note: Discovery was limited to devices present in ARP/neighbor tables and did not include active probing techniques.
 
 Identified multiple IPv4 addresses within the same subnet (172.23.32.0/20).
 
